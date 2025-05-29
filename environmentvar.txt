@@ -1,0 +1,27 @@
+pipeline {
+    agent any
+    environment {
+        PI=3
+      }
+
+    stages {
+        stage('Build') {
+            steps {
+                
+                sh '''
+                 echo "The value of PI is ${PI}"
+               '''
+            }
+        }
+        
+        stage('BUILD1'){
+             steps{
+                 sh '''
+                    area=$(( ${PI} + ${radius} + ${radius} ))
+                    echo "Area of a circle is  $area"
+                     
+                    '''
+    }
+}
+}
+}

@@ -1,0 +1,19 @@
+pipeline{
+agent any
+   stages{
+     stage('BUILD'){
+        steps{
+           sh '''
+              echo 'this code checks wether the following command executed or not'
+              pwd
+              if [ $? == 0 ]
+              then
+              echo 'command successful'
+              else
+              echo 'command unsuccessful'
+              fi
+              '''
+             }
+             }
+             }
+             }
